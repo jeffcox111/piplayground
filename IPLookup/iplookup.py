@@ -1,2 +1,3 @@
 import socket
-socket.gethostbyname(socket.gethostnameI())
+ip = socket.gethostbyname(socket.gethostname())
+print(ip)
