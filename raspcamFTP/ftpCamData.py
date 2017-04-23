@@ -8,3 +8,4 @@ for root, dirs, files in os.walk("C:/ftptesting"):
     for fname in files:
         full_fname = os.path.join(root, fname)
         ftp.storbinary('STOR FTPUser/camerauploads/' + fname, open(full_fname, 'rb'))
+        os.remove("/dev/shm/" + fname)
