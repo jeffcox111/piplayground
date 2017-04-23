@@ -1,0 +1,3 @@
+#add this line to /etc/rc.local to allow motion to start at boot
+/home/pi/mmal/motion -c /home/pi/mmal/motion-mmalcam-both.conf
+
