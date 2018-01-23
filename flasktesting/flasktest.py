@@ -5,7 +5,12 @@ APP = Flask(__name__)
 
 @APP.route("/")
 @APP.route('/index')
-def helindexlo():
+def index():
+    return render_template('/index.html')
+    
+
+@APP.route('/templatetest')
+def templatetest():
     now = datetime.datetime.now()
     timeString = now.strftime("%Y-%m-%d %H:%M")
     templateData = {
@@ -22,7 +27,7 @@ def test(value):
 @APP.route("/notepad")
 def notepad():
     os.system('start notepad.exe')
-    return redirect("/", code=302)
+    return redirect("/templatetest", code=302)
 
 if __name__ == "__main__":
     APP.run(host='0.0.0.0', port=80, debug=True)
