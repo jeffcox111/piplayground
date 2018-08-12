@@ -14,22 +14,22 @@ def Port1():
 
 @APP.route("/Port2")
 def Port2():
-    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_1"])
+    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_2"])
     return redirect("/", code=302)
     
 @APP.route("/Port3")
 def Port3():
-    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_1"])
+    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_3"])
     return redirect("/", code=302)
     
 @APP.route("/Port4")
 def Port4():
-    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_1"])
+    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_4"])
     return redirect("/", code=302)
     
 @APP.route("/Port5")
 def Port5():
-    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_1"])
+    rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_5"])
     return redirect("/", code=302)
 
 
