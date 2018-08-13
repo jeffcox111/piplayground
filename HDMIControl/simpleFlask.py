@@ -32,6 +32,16 @@ def Port5():
     rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_5"])
     return redirect("/", code=302)
 
+@APP.route("/shutdown")
+def shutdown():
+    rtn = subprocess.call(["sudo", "shutdown"])
+    return redirect("/", code=302)
+
+@APP.route("/restart")
+def restart():
+    rtn = subprocess.call(["sudo", "shutdown", "-r"])
+    return redirect("/", code=302)
+
 
 if __name__ == "__main__":
     APP.run(host='0.0.0.0', port=80, debug=True)
