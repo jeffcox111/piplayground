@@ -1,5 +1,5 @@
-from flask import Flask, render_template, redirect
 import subprocess
+from flask import Flask, render_template, redirect
 APP = Flask(__name__)
 
 @APP.route("/")
