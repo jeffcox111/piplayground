@@ -10,36 +10,43 @@ def index():
 @APP.route("/Port1")
 def Port1():
     rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_1"])
+    print(rtn)
     return redirect("/", code=302)
 
 @APP.route("/Port2")
 def Port2():
     rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_2"])
+    print(rtn)
     return redirect("/", code=302)
-    
+
 @APP.route("/Port3")
 def Port3():
     rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_3"])
+    print(rtn)
     return redirect("/", code=302)
-    
+
 @APP.route("/Port4")
 def Port4():
     rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_4"])
+    print(rtn)
     return redirect("/", code=302)
-    
+
 @APP.route("/Port5")
 def Port5():
     rtn = subprocess.call(["irsend", "SEND_ONCE", "/home/pi/lircd.conf", "BTN_5"])
+    print(rtn)
     return redirect("/", code=302)
 
 @APP.route("/shutdown")
 def shutdown():
     rtn = subprocess.call(["sudo", "shutdown"])
+    print(rtn)
     return redirect("/", code=302)
 
 @APP.route("/restart")
 def restart():
     rtn = subprocess.call(["sudo", "shutdown", "-r"])
+    print(rtn)
     return redirect("/", code=302)
 
 
