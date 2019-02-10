@@ -20,14 +20,16 @@ GREEN = GPIO.PWM(green, Freq)
 BLUE = GPIO.PWM(blue, Freq)
 
 try:
+
+	RED.start(100)
+	GREEN.start(1)
+	BLUE.start(1)
+
 	while RUNNING:
-		RED.start(100)
-		GREEN.start(1)
-		BLUE.start(1)
 
 		for x in range (1,101):
 			GREEN.ChangeDutyCycle(x)
-			time.sleep(0.05)
+			time.sleep(0.025)
 		for x in range (1,101):
 			RED.ChangeDutyCycle(101-x)
 			time.sleep(0.025)
