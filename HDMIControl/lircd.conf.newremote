@@ -1,0 +1,53 @@
+
+# Please take the time to finish this file as described in
+# https://sourceforge.net/p/lirc-remotes/wiki/Checklist/
+# and make it available to others by sending it to
+# <lirc@bartelmus.de>
+#
+# This config file was automatically generated
+# using lirc-0.10.1(default) on Mon Oct 20 20:10:53 2025
+# Command line used: -d /dev/lirc0
+# Kernel version (uname -r): 5.15.61-v7+
+#
+# Remote name (as of config file): newhdmi
+# Brand of remote device, the thing you hold in your hand:
+# Remote device model nr:
+# Remote device info url:
+# Does remote device has a bundled capture device e. g., a
+#     usb dongle? :
+# For bundled USB devices: usb vendor id, product id
+#     and device string (use dmesg or lsusb):
+# Type of device controlled
+#     (TV, VCR, Audio, DVD, Satellite, Cable, HTPC, ...) :
+# Device(s) controlled by this remote:
+
+begin remote
+
+  name  newhdmi
+  bits           24
+  flags SPACE_ENC|CONST_LENGTH
+  eps            30
+  aeps          100
+
+  header       9043  4459
+  one           609  1648
+  zero          609   518
+  ptrail        607
+  repeat       9043  2227
+  pre_data_bits   8
+  pre_data       0x0
+  gap          107630
+  toggle_bit_mask 0x0
+  frequency    38000
+
+      begin codes
+          BTN_1                    0xFFE01F 0x000000
+          BTN_2                    0xFF906F 0x000000
+          BTN_3                    0xFF6897 0x000000
+          BTN_4                    0xFFB04F 0x000000
+          BTN_5                    0xFF18E7 0x000000
+      end codes
+
+end remote
+
+
